@@ -1,0 +1,18 @@
+{% extends 'learning/base.html' %}
+
+{% block title %}
+ Stock Bought
+{% endblock title%}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class='container mt-5' >
+    <form action='' ,method='POST'>
+
+        {% csrf_token %}
+        {{ form|crispy }}
+
+        <input type='submit' value='Submit' />
+
+    </form>
+</div>
+{% endblock content %}

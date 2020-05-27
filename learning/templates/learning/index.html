@@ -1,0 +1,33 @@
+{% extends 'learning/base.html' %}
+{% block header %}
+ 
+<div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1>You have reached the learning page.</h1>
+          <p class="lead">A place where you can add learning topic and contribut to others.</p>
+        </div>
+</div>
+{% endblock header%}
+{% block content %}
+<p><h2>You have reached the learning home page.</h2></p>
+<p>This is where we have a log for learning new things.</p>
+<p>
+  <a href="{% url 'index' %}">
+     Learning logs
+  </a>-
+
+  <a href="{% url 'topics' %}">
+     Topics:
+  </a>
+</p>
+  
+
+
+{% if user.is_authenticated %}
+<h1>Hello {{ user.username }}.</h1>
+<a href="{% url 'logout' %}">logout</a>
+{% else %}
+<a href="{% url 'login' %}"><h2>Please log in.</h2></a>
+{% endif %}
+
+{% endblock content %}

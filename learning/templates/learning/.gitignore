@@ -1,0 +1,9 @@
+env/
+*.pot
+requirements.txt
+*.log
+db.sqlite3
+__pscache__
+.vscode/
+Pipfile
+Dockerfile
